@@ -14,7 +14,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     try:
         if req_body['name'] == "databricksflow":
-            lst = ['Java', 'Python', 'C', 'C++', 'JavaScript', 'Swift', 'Go']  
+            lst = ['Java', 'Python', 'C', 'C++', 'JavaScript', 'Swift', 'Go'] 
+	    logging.info(lst) 
             dframe = pd.DataFrame(lst)  
             logging.info(dframe)
         return func.HttpResponse("Process Complated")
